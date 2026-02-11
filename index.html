@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tart Tycoon - Apple Empire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍎 Tart Tycoon</h1>
+            <p>Build your apple empire!</p>
+        </div>
+
+        <div class="game-wrapper">
+            <div class="left-panel">
+                <div class="stats">
+                    <div class="stat-box">
+                        <h3>Gold</h3>
+                        <p id="gold">$0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Apples/sec</h3>
+                        <p id="appleRate">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Total Apples</h3>
+                        <p id="totalApples">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-panel">
+                <div class="apple-clicker">
+                    <button id="appleButton" class="apple-btn">🍎</button>
+                    <p>Click the apple!</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <h2>Upgrades</h2>
+                <div id="upgradesContainer" class="upgrades-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
