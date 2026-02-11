@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.game-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;
+    gap: 20px;
+    padding: 30px;
+    min-height: 500px;
+}
+
+.left-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-box h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-box p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.center-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.apple-clicker {
+    text-align: center;
+}
+
+.apple-btn {
+    width: 150px;
+    height: 150px;
+    font-size: 4em;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.apple-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.apple-btn:active {
+    transform: scale(0.95);
+}
+
+.apple-clicker p {
+    color: #667eea;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.right-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.right-panel h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.upgrades-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgrade-btn {
+    padding: 15px;
+    border: 2px solid #667eea;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.upgrade-btn:hover:not(:disabled) {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.upgrade-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.upgrade-btn strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.upgrade-btn small {
+    display: block;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .game-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .apple-btn {
+        width: 120px;
+        height: 120px;
+        font-size: 3em;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+}
